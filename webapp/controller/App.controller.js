@@ -12,21 +12,8 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("walkthrough.controller.App", {
-        onInit : function () {
-            // set data model on view
-            var oData = {
-               recipient : {
-                  name : "World"
-               }
-            };
-            var oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
-            // set i18n model on view
-            var i18nModel = new ResourceModel({
-            bundleName: "walkthrough.i18n.i18n"
-         });
-         this.getView().setModel(i18nModel, "i18n");
-         },
+       
+         
         onShowHello : function () {
              // read msg from i18n model
             var oBundle = this.getView().getModel("i18n").getResourceBundle();
