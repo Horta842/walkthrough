@@ -6,5 +6,6 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("walkthrough.controller.App", {
+		
 	});
 });

@@ -32,7 +32,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "walkthrough.view.HelloPanel",
+      "viewName": "walkthrough.view.App",
       "type": "XML",
       "async": true,
       "id": "walkThrough"
@@ -54,10 +54,17 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "walkthrough.i18n.i18n"
+          "bundleName": "walkthrough.i18n.i18n",
+          "supportedLocales": [""],
+		      "fallbackLocale": ""
         }
-      }
+      },
+      "invoice": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+        }
     },
+    
     "resources": {
       "css": [
         {
