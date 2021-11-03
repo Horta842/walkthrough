@@ -1,36 +1,17 @@
 <mvc:View
    controllerName="walkthrough.controller.App"
-   xmlns="sap.m" 
+   xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc"
    displayBlock="true">
-   <Shell> 
-        <App class="myAppDemoWT">
-            <pages>
-                <Page title="{i18n>homePageTitle}">
-                    <content>
-                    <Panel
-                        headerText="{i18n>helloPanelTitle}"
-                        class="sapUiResponsiveMargin"
-						width="auto">
-                        <content>
-
-                            <Button
-                                text="{i18n>showHelloButtonText}"
-                                press=".onShowHello"
-                                class="myCustomButton"/>
-                            <Input
-                                value="{/recipient/name}"
-                                description="hola2 {/recipient/name}"
-                                valueLiveUpdate="true"
-                                width="60%"/>
-                            <FormattedText
-									htmlText="hola3 {/recipient/name}"
-									class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-                        </content>
-                    </Panel>
-                    </content>
-                </Page>
-            </pages>
-        </App>
-   </Shell>
+   <Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<mvc:XMLView viewName="walkthrough.view.HelloPanel"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
