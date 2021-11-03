@@ -32,7 +32,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "walkthrough.view.walkThrough",
+      "viewName": "walkthrough.view.App",
       "type": "XML",
       "async": true,
       "id": "walkThrough"
