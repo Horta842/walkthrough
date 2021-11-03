@@ -2,12 +2,14 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel",
+    "sap/ui/core/Fragment"
 ], function(
 	Controller,
     MessageToast,
     JSONModel,
-    ResourceModel
+    ResourceModel,
+    Fragment
 ) {
 	"use strict";
 
@@ -21,6 +23,18 @@ sap.ui.define([
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show message
             MessageToast.show(sMsg);
+         },
+         onOpenDialog : function () {
+ 
+             // create dialog lazily
+             if (!this.pDialog) {
+                 this.pDialog = this.loadFragment({
+                     name: "walkthrough.view.HelloDialog"
+                 });
+             } 
+             this.pDialog.then(function(oDialog) {
+                 oDialog.open();
+             });
          }
 	});
 });
